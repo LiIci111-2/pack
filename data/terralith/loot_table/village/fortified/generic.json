@@ -4,8 +4,222 @@
         {
             "rolls": {
                 "type": "minecraft:uniform",
-                "min": 3,
-                "max": 6
+                "min": 0,
+                "max": 1
+            },
+            "bonus_rolls": 1,
+            "entries": [
+                {
+                    "weight":5,
+                    "type": "minecraft:item",
+                    "name": "minecraft:cookie",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name":{
+                                "type": "text",
+                                "text": "可疑的曲奇",
+                                "color": "yellow",
+                                "italic": false
+                            }
+                        },
+
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "不知道在箱子里躺了多久的曲奇，闪烁着诡异的光芒",
+                                    "color": "aqua",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "effects": [
+                                        {
+                                            "effect": {
+                                                "id": "poison",
+                                                "duration": 800,
+                                                "amplifier": 1
+                                            }
+                                        },
+                                        {
+                                            "effect": {
+                                                "id": "nausea",
+                                                "duration": 800
+                                            }
+                                        },
+                                        {
+                                            "effect": {
+                                                "id": "health_boost",
+                                                "duration": 4000,
+                                                "amplifier": 4
+                                            }
+                                        }
+                                    ],
+                                    "eat_seconds": 1.6,
+                                    "can_always_eat": true,
+                                    "nutrition": 2,
+                                    "saturation": 2
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "nutrition": 3,
+                                    "saturation": 3,
+                                    "can_always_eat": false,
+                                    "eat_seconds": 1.2
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_name",
+                            "name":{
+                                "text": "pooocky",
+                                "italic": false,
+                                "color": "gold"
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "mode": "append",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "比普通pocky更长长长长",
+                                    "italic": false,
+                                    "color": "aqua"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 8,
+                                "min": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "tnt",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "nutrition": 2,
+                                    "saturation": 5,
+                                    "can_always_eat": false,
+                                    "eat_seconds": 1.2
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_name",
+                            "name":{
+                                "text": "爆竹糖果",
+                                "italic": false,
+                                "color": "dark_red"
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "mode": "append",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "会在嘴里爆开的糖果！",
+                                    "italic": false,
+                                    "color": "aqua"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 3,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "cake",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "nutrition": 16,
+                                    "saturation": 16,
+                                    "can_always_eat": false,
+                                    "eat_seconds": 8
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_name",
+                            "name":{
+                                "text": "大蛋糕",
+                                "italic": false,
+                                "color": "yellow"
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "mode": "append",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "很大的蛋糕，但是可以拿在手里吃",
+                                    "italic": false,
+                                    "color": "aqua"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "type": "uniform",
+                                "max": 1,
+                                "min": 0
+                            }
+                        }
+                    ]
+                }
+
+
+            ]
+        },
+        {
+            "rolls": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 1
             },
             "bonus_rolls": 0,
             "entries": [
@@ -14,128 +228,236 @@
                     "name": "minecraft:gold_nugget",
                     "functions": [
                         {
-                            "function": "minecraft:set_count",
+                            "function": "set_name",
+                            "entity": "this",
+                            "name":{
+                                "type": "text",
+                                "text": "凤凰卷",
+                                "color": "red",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "吃卷",
+                                    "color": "aqua",
+                                    "italic": false,
+                                    "strikethrough": true
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_count",
                             "count": {
-                                "type": "minecraft:uniform",
-                                "min": 2,
-                                "max": 4
-                            },
-                            "add": false
+                                "type": "uniform",
+                                "max": 2,
+                                "min": 1
+                            }
+                        },
+
+                        {
+                            "function": "set_custom_model_data",
+                            "value": 110030
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "不过好像有什么会在吃了之后追杀你？",
+                                    "color": "aqua",
+                                    "italic": false
+                                }
+                            ]
+                        },
+
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "effects": [
+                                        {
+                                            "effect": {
+                                                "id": "speed",
+                                                "duration": 4000,
+                                                "amplifier": 2
+                                            }
+                                        },
+                                        {
+                                            "effect": {
+                                                "id": "jump_boost",
+                                                "duration": 4000,
+                                                "amplifier": 2
+                                            }
+                                        }
+                                    ],
+                                    "eat_seconds": 1.6,
+                                    "can_always_eat": true,
+                                    "nutrition": 4,
+                                    "saturation": 4
+                                }
+                            }
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 2
+            },
+            "bonus_rolls": 1,
+            "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:dandelion",
-                    "weight": 1
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:poppy",
-                    "weight": 3,
+                    "name": "minecraft:cooked_chicken",
                     "functions": [
                         {
-                            "function": "minecraft:set_count",
+                            "function": "set_name",
+                            "entity": "this",
+                            "name":{
+                                "type": "text",
+                                "text": "吮指原味鸡",
+                                "color": "yellow",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "set_count",
                             "count": {
-                                "type": "minecraft:uniform",
-                                "min": 1,
-                                "max": 3
-                            },
-                            "add": false
+                                "type": "uniform",
+                                "max": 5,
+                                "min": 2
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "疯狂星期四",
+                                    "color": "aqua",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "V我50卷",
+                                    "color": "aqua",
+                                    "italic": false
+                                }
+                            ]
+                        },
+
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "effects": [
+                                        {
+                                            "effect": {
+                                                "id": "saturation",
+                                                "duration": 400,
+                                                "amplifier": 1
+                                            }
+                                        }
+                                    ],
+                                    "eat_seconds": 1.6,
+                                    "can_always_eat": true,
+                                    "nutrition": 6,
+                                    "saturation": 6
+                                }
+                            }
                         }
                     ]
-                },
+                }
+            ]
+        },
+
+
+
+        {
+            "rolls": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 1
+            },
+            "bonus_rolls": 0,
+            "entries": [
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:potato",
-                    "weight": 7,
                     "functions": [
                         {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:uniform",
-                                "min": 2,
-                                "max": 4
-                            },
-                            "add": false
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:bread",
-                    "weight": 7,
-                    "functions": [
+                            "function": "set_name",
+                            "entity": "this",
+                            "name":{
+                                "type": "text",
+                                "text": "不详土豆（ver.不可堆叠）",
+                                "color": "dark_purple",
+                                "italic": false
+                            }
+                        },
                         {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:uniform",
-                                "min": 1,
-                                "max": 2
-                            },
-                            "add": false
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:apple",
-                    "weight": 7,
-                    "functions": [
+                            "function": "set_components",
+                            "components": {
+                                "max_stack_size": 1
+                            }
+                        },
                         {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:uniform",
-                                "min": 1,
-                                "max": 2
-                            },
-                            "add": false
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:book",
-                    "weight": 1
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:feather",
-                    "weight": 2
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:emerald",
-                    "weight": 1,
-                    "functions": [
+                            "function": "set_lore",
+                            "entity": "this",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "type": "text",
+                                    "text": "据说是薛定谔种出来的",
+                                    "color": "aqua",
+                                    "italic": false
+                                }
+                            ]
+                        },
                         {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:uniform",
-                                "min": 1,
-                                "max": 2
-                            },
-                            "add": false
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:oak_sapling",
-                    "weight": 3,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:uniform",
-                                "min": 1,
-                                "max": 2
-                            },
-                            "add": false
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "nutrition": 4,
+                                    "saturation": 4,
+                                    "can_always_eat": true,
+                                    "eat_seconds": 1.6,
+                                    "effects": [
+                                        {
+                                            "effect": {
+                                                "id": "bad_omen",
+                                                "duration": 1200,
+                                                "amplifier": 5
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
                         }
                     ]
                 }
             ]
         }
-    ]
+    ],
+    "random_sequence": "minecraft:chests/pillager_outpost"
 }
