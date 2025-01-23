@@ -345,10 +345,6 @@
                         },
 
                         {
-                            "function": "set_custom_model_data",
-                            "value": 110030
-                        },
-                        {
                             "function": "set_lore",
                             "entity": "this",
                             "mode": "append",
@@ -403,16 +399,17 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:armadillo_scute",
+                    "name": "minecraft:gold_nugget",
                     "functions": [
                         {
                             "function": "set_name",
                             "entity": "this",
                             "name":{
                                 "type": "text",
-                                "text": "复新之证",
-                                "color": "red",
-                                "italic": false
+                                "text": "砂糖桔",
+                                "color": "gold",
+                                "italic": false,
+                                "bold":true
                             }
                         },
                         {
@@ -422,20 +419,7 @@
                             "lore": [
                                 {
                                     "type": "text",
-                                    "text": "周而复始，年复一年",
-                                    "color": "aqua",
-                                    "italic": false
-                                }
-                            ]
-                        },
-                        {
-                            "function": "set_lore",
-                            "entity": "this",
-                            "mode": "append",
-                            "lore": [
-                                {
-                                    "type": "text",
-                                    "text": "今天又是新的开始",
+                                    "text": "你的脸怎么黄黄的",
                                     "color": "aqua",
                                     "italic": false
                                 }
@@ -449,12 +433,19 @@
                                 {
                                     "type": "text",
                                     "text": "[2025·春节]活动兑换物",
-                                    "color": "gold",
+                                    "color": "yellow",
                                     "italic": false,
                                     "bold": true
                                 }
                             ]
                         },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_model_data": 110030
+                            }
+                        },
+
 
                         {
                             "function": "set_count",

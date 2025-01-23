@@ -259,11 +259,6 @@
                                 "min": 1
                             }
                         },
-
-                        {
-                            "function": "set_custom_model_data",
-                            "value": 110030
-                        },
                         {
                             "function": "set_lore",
                             "entity": "this",
