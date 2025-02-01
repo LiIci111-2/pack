@@ -7,9 +7,5 @@
     "spread_type": "triangular"
   },
   "structures": [
-    {
-      "structure": "minecraft:end_city",
-      "weight": 1
-    }
   ]
 }

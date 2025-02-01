@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "eat_orange": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "gold_nugget",
+                    "components": {
+                        "custom_model_data": 110030
+                    }
+                }
+            }
+        }
+    }
+}

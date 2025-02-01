@@ -3,6 +3,9 @@
     {
       "id": "terralith:setup",
       "required": false
+    },
+    {
+      "id": "event:init"
     }
   ]
 }

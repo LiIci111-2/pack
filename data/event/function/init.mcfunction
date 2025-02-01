@@ -1,0 +1,1 @@
+scoreboard objectives add event.orange_eat dummy
