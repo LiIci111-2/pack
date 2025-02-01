@@ -11,5 +11,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "event:eat"
     }
 }
